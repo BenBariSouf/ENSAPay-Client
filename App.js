@@ -13,6 +13,7 @@ import HomeScreen from "./screens/HomeScreen";
 import DrawerNavigationRoutes from "./screens/DrawerNavigationRoutes";
 import ListeImpayes from "./screens/ListeImpayes";
 import PayCreance from "./screens/PayCreance";
+import UserProfile from "./screens/UserProfile";
 
 const Stack = createStackNavigator();
 
@@ -41,6 +42,12 @@ const Auth = () => {
 			{/* <Stack.Screen
 				name="PayCreance"
 				component={PayCreance}
+				options={{ headerShown: false }}
+			/> */}
+
+			{/* <Stack.Screen
+				name="UserProfile"
+				component={UserProfile}
 				options={{ headerShown: false }}
 			/> */}
 		</Stack.Navigator>
