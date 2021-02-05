@@ -1,50 +1,66 @@
 import React from "react";
-import { View, Text, SafeAreaView } from "react-native";
+import { View, Text, SafeAreaView, StyleSheet } from "react-native";
+
+import { ActivityIndicator, Surface } from "react-native-paper";
+
+import MarocTelecom from "../assets/images/Maroc_telecom.png";
+import Inwi from "../assets/images/Inwi-Logo.png";
+import Redal from "../assets/images/redal-logo.png";
+
+import CreancierCard from "../components/CreancierCard";
 
 const HomeScreen = () => {
+	// const serviceSlice = useSelector((state) => state.services);
+	const LeftContent = (props) => <Avatar.Icon {...props} icon="folder" />;
 	return (
-		<SafeAreaView style={{ flex: 1 }}>
-			<View style={{ flex: 1, padding: 16 }}>
+		<SafeAreaView style={{ flex: 1, backgroundColor: "#d3d3da" }}>
+			<View style={{ flex: 0.45, padding: 16 }}>
 				<View
 					style={{
-						flex: 1,
 						alignItems: "center",
-						justifyContent: "center",
 					}}
 				>
-					<Text
-						style={{
-							fontSize: 20,
-							textAlign: "center",
-							marginBottom: 16,
-						}}
-					>
-						Example of Splash, Login and Sign Up in React Native
-						{"\n\n"}
-						This is the Home Screen
-					</Text>
+					<Text style={styles.heading}>Paiement de facture</Text>
+					<Text style={styles.paiement}>Liste des créanciers</Text>
 				</View>
-				<Text
-					style={{
-						fontSize: 18,
-						textAlign: "center",
-						color: "grey",
-					}}
-				>
-					Splash, Login and Register Example{"\n"}React Native
-				</Text>
-				<Text
-					style={{
-						fontSize: 16,
-						textAlign: "center",
-						color: "grey",
-					}}
-				>
-					www.aboutreact.com
-				</Text>
+				<CreancierCard
+					logo={MarocTelecom}
+					title="Iam Recharges"
+					color="#ff820a"
+					creance1="Produit Mobile Jawal"
+					creance2="Produit Internet SIM"
+				/>
+				<CreancierCard
+					logo={Inwi}
+					title="Inwi"
+					color="#841584"
+					creance1="Reacharge Inwi"
+				/>
+				<CreancierCard
+					logo={Redal}
+					title="Redal"
+					color="#8b0000"
+					creance1="Facture Redal d'eau"
+					creance2="Facture Redal d'éléctricité"
+				/>
 			</View>
 		</SafeAreaView>
 	);
 };
+
+const styles = StyleSheet.create({
+	heading: {
+		fontSize: 19,
+		textAlign: "center",
+		marginTop: 46,
+	},
+
+	paiement: {
+		fontSize: 19,
+		fontWeight: "bold",
+		padding: 10,
+		textTransform: "uppercase",
+	},
+});
 
 export default HomeScreen;

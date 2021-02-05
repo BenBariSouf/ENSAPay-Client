@@ -9,6 +9,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import SplashScreen from "./screens/SplashScreen";
 import LoginScreen from "./screens/LoginScreen";
 import DrawerNavigationRoutes from "./screens/DrawerNavigationRoutes";
+import HomeScreen from "./screens/HomeScreen";
 
 const Stack = createStackNavigator();
 
@@ -16,9 +17,15 @@ const Auth = () => {
 	// Stack Navigator for Login and Sign up Screen
 	return (
 		<Stack.Navigator initialRouteName="LoginScreen">
-			<Stack.Screen
+			{/* <Stack.Screen
 				name="LoginScreen"
 				component={LoginScreen}
+				options={{ headerShown: false }}
+			/> */}
+
+			<Stack.Screen
+				name="HomeScreen"
+				component={HomeScreen}
 				options={{ headerShown: false }}
 			/>
 		</Stack.Navigator>
