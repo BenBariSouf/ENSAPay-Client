@@ -17,17 +17,17 @@ const Auth = () => {
 	// Stack Navigator for Login and Sign up Screen
 	return (
 		<Stack.Navigator initialRouteName="LoginScreen">
-			{/* <Stack.Screen
+			<Stack.Screen
 				name="LoginScreen"
 				component={LoginScreen}
 				options={{ headerShown: false }}
-			/> */}
+			/>
 
-			<Stack.Screen
+			{/* <Stack.Screen
 				name="HomeScreen"
 				component={HomeScreen}
 				options={{ headerShown: false }}
-			/>
+			/> */}
 		</Stack.Navigator>
 	);
 };
