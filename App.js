@@ -8,8 +8,11 @@ import { createStackNavigator } from "@react-navigation/stack";
 // Import Screens
 import SplashScreen from "./screens/SplashScreen";
 import LoginScreen from "./screens/LoginScreen";
+import HomeScreen from "./screens/HomeScreen";
+
 import DrawerNavigationRoutes from "./screens/DrawerNavigationRoutes";
 import ListeImpayes from "./screens/ListeImpayes";
+import PayCreance from "./screens/PayCreance";
 
 const Stack = createStackNavigator();
 
@@ -32,6 +35,12 @@ const Auth = () => {
 			{/* <Stack.Screen
 				name="ListeImpayes"
 				component={ListeImpayes}
+				options={{ headerShown: false }}
+			/> */}
+
+			{/* <Stack.Screen
+				name="PayCreance"
+				component={PayCreance}
 				options={{ headerShown: false }}
 			/> */}
 		</Stack.Navigator>
