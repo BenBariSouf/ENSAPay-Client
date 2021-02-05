@@ -35,6 +35,7 @@ export default function CreancierCard(props) {
 					}}
 					onPress={() => {
 						alert(`GetForms dial ${props.creance1} `);
+						console.log(125);
 					}}
 				>
 					{props.creance1}

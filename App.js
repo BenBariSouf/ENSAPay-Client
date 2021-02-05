@@ -9,7 +9,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import SplashScreen from "./screens/SplashScreen";
 import LoginScreen from "./screens/LoginScreen";
 import DrawerNavigationRoutes from "./screens/DrawerNavigationRoutes";
-import HomeScreen from "./screens/HomeScreen";
+import ListeImpayes from "./screens/ListeImpayes";
 
 const Stack = createStackNavigator();
 
@@ -26,6 +26,12 @@ const Auth = () => {
 			{/* <Stack.Screen
 				name="HomeScreen"
 				component={HomeScreen}
+				options={{ headerShown: false }}
+			/> */}
+
+			{/* <Stack.Screen
+				name="ListeImpayes"
+				component={ListeImpayes}
 				options={{ headerShown: false }}
 			/> */}
 		</Stack.Navigator>
